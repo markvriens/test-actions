@@ -39,7 +39,7 @@ jobs:
 
     environment:
       name: production
-      url: ${{ steps.deployment.output.page_url }}
+      url: ${{ steps.deployment2.output.page_url }}
 
     runs-on: ubuntu-latest
 
@@ -63,7 +63,7 @@ jobs:
         with:
           path: './out'
       - name: deploy
-        id: deployment
+        id: deployment2
         uses: actions/deploy-pages@v4
       
 
